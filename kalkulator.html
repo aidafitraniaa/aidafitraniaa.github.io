@@ -1,23 +1,27 @@
 <div id="app">
-    Hasil : {{ hasil }}<br> 
-    <input v-model="Angka 1" type="number">
-    <input v-model="Angka 2" type="number"><br>
-    <button @click="hasil=Angka 1+Angka 2">Tambah</button>
-    <button @click="hasil=Angka 1-Angka 2">Kurang</button>
-    <button @click="hasil=Angka 1*Angka 2">Kali</button>
-    <button @click="hasil=Angka 1/Angka 2">Bagi</button>
-    </div>
-    
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script>
-        const app = Vue.createApp({
-        data() {
-        return {
-            Angka 1 : 0,
-            Angka 2: 0,
-            hasil : 0,
-            }
-           }
-          })
-          app.mount('#app')
-    </script>
+<br> 
+<input v-model="angka1" type="number">
+<input v-model="angka2" type="number"><br>
+<br>
+<button @click="hasil=angka1+angka2">+</button>
+<button @click="hasil=angka1-angka2">-</button>
+<button @click="hasil=angka1*angka2">*</button>
+<button @click="hasil=angka1/angka2">/</button>
+<br>
+<br>
+Hasil : {{ hasil }}<br>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+	const app = Vue.createApp({
+    data() {
+    return {
+    	angka1 : 0,
+        angka2 : 0,
+        hasil : 0,
+        }
+       }
+      })
+      app.mount('#app')
+</script>
